@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ডিজিটাল ল্যান্ড সার্ভে ফার্ম | Feni, Chittagong</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/logo.png">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-logo">
+    <img src="images/logo.png" alt="Logo">
+    <span>ডিজিটাল সার্ভে ফার্ম
+      <small>Digital Land Survey & Mapping</small>
+    </span>
+  </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html" class="active">হোম</a></li>
+    <li><a href="services.html">সেবাসমূহ</a></li>
+    <li><a href="team.html">আমাদের টিম</a></li>
+    <li><a href="contact.html">যোগাযোগ</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleNav()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-content">
+    <h1>আধুনিক <span>ডিজিটাল ভূমি জরিপ</span> সেবা</h1>
+    <p>GPS, Total Station ও Drone প্রযুক্তিতে নির্ভুল জরিপ — ফেনী ও চট্টগ্রামের বিশ্বস্ত প্রতিষ্ঠান।</p>
+    <a href="services.html" class="btn btn-primary">আমাদের সেবা দেখুন</a>
+    <a href="contact.html" class="btn btn-outline">যোগাযোগ করুন</a>
+  </div>
+</div>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stat-item"><div class="num" id="stat-projects">500+</div><p>সম্পন্ন প্রকল্প</p></div>
+  <div class="stat-item"><div class="num" id="stat-years">15+</div><p>বছরের অভিজ্ঞতা</p></div>
+  <div class="stat-item"><div class="num" id="stat-clients">1200+</div><p>সন্তুষ্ট গ্রাহক</p></div>
+  <div class="stat-item"><div class="num" id="stat-team">20+</div><p>বিশেষজ্ঞ কর্মী</p></div>
+</div>
+
+<!-- INSTRUMENTS SECTION -->
+<section>
+  <div class="section-title">
+    <h2>আমাদের যন্ত্রপাতি</h2>
+    <p>আধুনিকতম জরিপ সরঞ্জাম দিয়ে আমরা নিশ্চিত করি সর্বোচ্চ নির্ভুলতা।</p>
+    <div class="underline"></div>
+  </div>
+  <div class="instruments-grid" id="instrumentsGrid">
+    <!-- Loaded from data.json via JS -->
+  </div>
+</section>
+
+<!-- SERVICES PREVIEW -->
+<section class="services-bg">
+  <div class="section-title">
+    <h2>আমাদের মূল সেবাসমূহ</h2>
+    <p>পেশাদার জরিপ থেকে ডিজিটাল ম্যাপিং — সব সমাধান এক ছাদের নিচে।</p>
+    <div class="underline"></div>
+  </div>
+  <div class="services-grid" id="servicesPreview">
+    <!-- Loaded from data.json via JS -->
+  </div>
+</section>
+
+<!-- WHY US -->
+<section>
+  <div class="section-title">
+    <h2>কেন আমাদের বেছে নেবেন?</h2>
+    <div class="underline"></div>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <span class="icon">🎯</span>
+      <h3>নির্ভুল পরিমাপ</h3>
+      <p>RTK GPS ও Total Station দিয়ে মিলিমিটার মাত্রার নির্ভুলতা নিশ্চিত করি।</p>
+    </div>
+    <div class="service-card">
+      <span class="icon">⚡</span>
+      <h3>দ্রুত ডেলিভারি</h3>
+      <p>নির্ধারিত সময়ের মধ্যে কাজ সম্পন্ন করে ডিজিটাল রিপোর্ট প্রদান করা হয়।</p>
+    </div>
+    <div class="service-card">
+      <span class="icon">📜</span>
+      <h3>আইনসম্মত রিপোর্ট</h3>
+      <p>সকল রিপোর্ট বাংলাদেশ ভূমি জরিপ আইন অনুযায়ী প্রস্তুত করা হয়।</p>
+    </div>
+    <div class="service-card">
+      <span class="icon">💰</span>
+      <h3>সাশ্রয়ী মূল্য</h3>
+      <p>মানসম্পন্ন সেবা সবচেয়ে প্রতিযোগিতামূলক মূল্যে প্রদান করা হয়।</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4>ডিজিটাল সার্ভে ফার্ম</h4>
+      <p>আধুনিক প্রযুক্তি ব্যবহার করে নির্ভুল ভূমি জরিপ, ডিজিটাল ম্যাপিং ও সংশ্লিষ্ট সেবা প্রদানকারী একটি বিশ্বস্ত প্রতিষ্ঠান।</p>
+    </div>
+    <div class="footer-col">
+      <h4>দ্রুত লিংক</h4>
+      <ul>
+        <li><a href="index.html">হোম</a></li>
+        <li><a href="services.html">সেবাসমূহ</a></li>
+        <li><a href="team.html">আমাদের টিম</a></li>
+        <li><a href="contact.html">যোগাযোগ</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>সেবাসমূহ</h4>
+      <ul>
+        <li><a href="services.html">ভূমি জরিপ</a></li>
+        <li><a href="services.html">টপোগ্রাফিক জরিপ</a></li>
+        <li><a href="services.html">ড্রোন ম্যাপিং</a></li>
+        <li><a href="services.html">GPS সার্ভে</a></li>
+        <li><a href="services.html">KMZ/GIS ম্যাপিং</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>যোগাযোগ</h4>
+      <ul>
+        <li><a href="#">📍 ফেনী সদর, ফেনী</a></li>
+        <li><a href="tel:+8801XXXXXXXXX">📞 +880 1XXX-XXXXXX</a></li>
+        <li><a href="mailto:info@digitalsurvey.bd">✉️ info@digitalsurvey.bd</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 ডিজিটাল সার্ভে ফার্ম | সর্বস্বত্ব সংরক্ষিত</p>
+  </div>
+</footer>
+
+<script>
+function toggleNav() {
+  document.getElementById('navLinks').classList.toggle('open');
+}
+
+fetch('data.json')
+  .then(r => r.json())
+  .then(data => {
+    // Instruments
+    const ig = document.getElementById('instrumentsGrid');
+    data.instruments.forEach(item => {
+      ig.innerHTML += `
+        <div class="instrument-card">
+          <img src="${item.image}" alt="${item.name}" onerror="this.src='https://placehold.co/400x190/0a2342/ffffff?text=${encodeURIComponent(item.name)}'">
+          <div class="card-body">
+            <h3>${item.name}</h3>
+            <p>${item.desc}</p>
+          </div>
+        </div>`;
+    });
+    // Services preview (first 4)
+    const sp = document.getElementById('servicesPreview');
+    data.services.slice(0,4).forEach(s => {
+      sp.innerHTML += `
+        <div class="service-card">
+          <span class="icon">${s.icon}</span>
+          <h3>${s.title}</h3>
+          <p>${s.desc}</p>
+        </div>`;
+    });
+    // Stats
+    if(data.stats) {
+      document.getElementById('stat-projects').textContent = data.stats.projects;
+      document.getElementById('stat-years').textContent = data.stats.years;
+      document.getElementById('stat-clients').textContent = data.stats.clients;
+      document.getElementById('stat-team').textContent = data.stats.team;
+    }
+  });
+</script>
+</body>
+</html>
