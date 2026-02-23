@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>যোগাযোগ | ডিজিটাল সার্ভে ফার্ম</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">
+    <img src="images/logo.png" alt="Logo">
+    <span>ডিজিটাল সার্ভে ফার্ম<small>Digital Land Survey & Mapping</small></span>
+  </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">হোম</a></li>
+    <li><a href="services.html">সেবাসমূহ</a></li>
+    <li><a href="team.html">আমাদের টিম</a></li>
+    <li><a href="contact.html" class="active">যোগাযোগ</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleNav()"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="page-header">
+  <h1>আমাদের সাথে যোগাযোগ করুন</h1>
+  <p>যেকোনো জিজ্ঞাসা বা সেবা গ্রহণে নির্দ্বিধায় যোগাযোগ করুন</p>
+  <div class="breadcrumb"><a href="index.html">হোম</a> &rsaquo; যোগাযোগ</div>
+</div>
+
+<section>
+  <div class="contact-wrapper">
+    <div class="contact-info">
+      <h3>📍 আমাদের ঠিকানা ও তথ্য</h3>
+      <div class="contact-item">
+        <div class="ci-icon">🏢</div>
+        <p><strong>অফিসের ঠিকানা</strong><br>
+        [আপনার অফিসের ঠিকানা], ফেনী সদর,<br>ফেনী জেলা, চট্টগ্রাম বিভাগ, বাংলাদেশ।</p>
+      </div>
+      <div class="contact-item">
+        <div class="ci-icon">📞</div>
+        <p><strong>ফোন নম্বর</strong><br>
+        +880 1XXX-XXXXXX<br>
+        +880 1XXX-XXXXXX (অফিস)</p>
+      </div>
+      <div class="contact-item">
+        <div class="ci-icon">✉️</div>
+        <p><strong>ইমেইল</strong><br>info@digitalsurvey.bd</p>
+      </div>
+      <div class="contact-item">
+        <div class="ci-icon">⏰</div>
+        <p><strong>অফিস সময়</strong><br>
+        শনিবার – বৃহস্পতিবার: সকাল ৯টা – বিকেল ৫টা<br>
+        শুক্রবার: বন্ধ</p>
+      </div>
+      <div class="contact-item">
+        <div class="ci-icon">📘</div>
+        <p><strong>সোশ্যাল মিডিয়া</strong><br>
+        <a href="#" style="color:#0a2342;">Facebook</a> |
+        <a href="#" style="color:#0a2342;">YouTube</a></p>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <h3>📩 বার্তা পাঠান</h3>
+      <form id="contactForm" onsubmit="submitForm(event)">
+        <div class="form-group">
+          <label>আপনার নাম *</label>
+          <input type="text" placeholder="আপনার পূর্ণ নাম লিখুন" required>
+        </div>
+        <div class="form-group">
+          <label>মোবাইল নম্বর *</label>
+          <input type="tel" placeholder="+880 1XXX-XXXXXX" required>
+        </div>
+        <div class="form-group">
+          <label>ইমেইল</label>
+          <input type="email" placeholder="your@email.com">
+        </div>
+        <div class="form-group">
+          <label>সেবার ধরন</label>
+          <select>
+            <option>সেবা নির্বাচন করুন</option>
+            <option>ভূমি জরিপ</option>
+            <option>টপোগ্রাফিক জরিপ</option>
+            <option>ড্রোন ম্যাপিং</option>
+            <option>GPS সার্ভে</option>
+            <option>KMZ/GIS ম্যাপিং</option>
+            <option>অন্যান্য</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>বার্তা *</label>
+          <textarea placeholder="আপনার প্রয়োজন বা প্রশ্ন লিখুন..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%">বার্তা পাঠান ✉️</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Google Map -->
+  <div class="map-section">
+    <div class="section-title" style="margin-bottom:20px">
+      <h2>আমাদের অবস্থান</h2>
+      <div class="underline"></div>
+    </div>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14714.543!2d91.3960!3d23.0226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375340c5c7b56b75%3A0x6b0e5e6c7e57e7f1!2sFeni%2C+Bangladesh!5e0!3m2!1sen!2sbd!4v1"
+      allowfullscreen loading="lazy">
+    </iframe>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col"><h4>ডিজিটাল সার্ভে ফার্ম</h4><p>আধুনিক প্রযুক্তিতে নির্ভুল ভূমি জরিপ সেবা।</p></div>
+    <div class="footer-col"><h4>লিংক</h4><ul><li><a href="index.html">হোম</a></li><li><a href="services.html">সেবা</a></li><li><a href="team.html">টিম</a></li><li><a href="contact.html">যোগাযোগ</a></li></ul></div>
+    <div class="footer-col"><h4>যোগাযোগ</h4><ul><li><a href="#">📍 ফেনী সদর</a></li><li><a href="tel:+8801XXXXXXXXX">📞 +880 1XXX-XXXXXX</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2025 ডিজিটাল সার্ভে ফার্ম</p></div>
+</footer>
+
+<script>
+function toggleNav() { document.getElementById('navLinks').classList.toggle('open'); }
+function submitForm(e) {
+  e.preventDefault();
+  alert('আপনার বার্তা পাঠানো হয়েছে। আমরা শীঘ্রই যোগাযোগ করব। ধন্যবাদ!');
+  e.target.reset();
+}
+</script>
+</body>
+</html>
