@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>আমাদের টিম | ডিজিটাল সার্ভে ফার্ম</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">
+    <img src="images/logo.png" alt="Logo">
+    <span>ডিজিটাল সার্ভে ফার্ম<small>Digital Land Survey & Mapping</small></span>
+  </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">হোম</a></li>
+    <li><a href="services.html">সেবাসমূহ</a></li>
+    <li><a href="team.html" class="active">আমাদের টিম</a></li>
+    <li><a href="contact.html">যোগাযোগ</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleNav()"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="page-header">
+  <h1>আমাদের দলের পরিচয়</h1>
+  <p>অভিজ্ঞ ও দক্ষ পেশাদারদের সমন্বয়ে গঠিত আমাদের টিম</p>
+  <div class="breadcrumb"><a href="index.html">হোম</a> &rsaquo; আমাদের টিম</div>
+</div>
+
+<section>
+  <div class="section-title">
+    <h2>কর্মকর্তা ও বিশেষজ্ঞ</h2>
+    <p>প্রতিটি সদস্য তাদের ক্ষেত্রে উচ্চ প্রশিক্ষিত ও অভিজ্ঞ।</p>
+    <div class="underline"></div>
+  </div>
+  <div class="team-grid" id="teamGrid"></div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col"><h4>ডিজিটাল সার্ভে ফার্ম</h4><p>আধুনিক প্রযুক্তিতে নির্ভুল ভূমি জরিপ সেবা।</p></div>
+    <div class="footer-col"><h4>লিংক</h4><ul><li><a href="index.html">হোম</a></li><li><a href="services.html">সেবা</a></li><li><a href="team.html">টিম</a></li><li><a href="contact.html">যোগাযোগ</a></li></ul></div>
+    <div class="footer-col"><h4>যোগাযোগ</h4><ul><li><a href="#">📍 ফেনী সদর</a></li><li><a href="tel:+8801XXXXXXXXX">📞 +880 1XXX-XXXXXX</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2025 ডিজিটাল সার্ভে ফার্ম</p></div>
+</footer>
+
+<script>
+function toggleNav() { document.getElementById('navLinks').classList.toggle('open'); }
+fetch('data.json').then(r=>r.json()).then(data=>{
+  const el = document.getElementById('teamGrid');
+  data.team.forEach(m=>{
+    el.innerHTML += `
+      <div class="team-card">
+        <img src="${m.photo}" alt="${m.name}" onerror="this.src='https://placehold.co/300x210/0a2342/ffffff?text=${encodeURIComponent(m.name)}'">
+        <div class="team-info">
+          <h3>${m.name}</h3>
+          <div class="designation">${m.designation}</div>
+          <p>${m.bio}</p>
+        </div>
+      </div>`;
+  });
+});
+</script>
+</body>
+</html>
