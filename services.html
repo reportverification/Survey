@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>সেবাসমূহ | ডিজিটাল সার্ভে ফার্ম</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">
+    <img src="images/logo.png" alt="Logo">
+    <span>ডিজিটাল সার্ভে ফার্ম<small>Digital Land Survey & Mapping</small></span>
+  </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">হোম</a></li>
+    <li><a href="services.html" class="active">সেবাসমূহ</a></li>
+    <li><a href="team.html">আমাদের টিম</a></li>
+    <li><a href="contact.html">যোগাযোগ</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleNav()"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="page-header">
+  <h1>আমাদের সেবাসমূহ</h1>
+  <p>পেশাদার ডিজিটাল জরিপ ও ম্যাপিং সমাধান</p>
+  <div class="breadcrumb"><a href="index.html">হোম</a> &rsaquo; সেবাসমূহ</div>
+</div>
+
+<section>
+  <div class="section-title">
+    <h2>সকল সেবা</h2>
+    <p>আমরা প্রতিটি প্রকল্পে সর্বোচ্চ মানের সেবা প্রদান করি।</p>
+    <div class="underline"></div>
+  </div>
+  <div class="services-grid" id="allServices"></div>
+</section>
+
+<section class="services-bg">
+  <div class="section-title">
+    <h2>কাজের ধাপসমূহ</h2>
+    <p>আমাদের পেশাদার কর্মপ্রক্রিয়া</p>
+    <div class="underline"></div>
+  </div>
+  <div class="services-grid">
+    <div class="service-card"><span class="icon">1️⃣</span><h3>আবেদন ও পরামর্শ</h3><p>ফোন বা সরাসরি অফিসে এসে প্রকল্পের বিবরণ দিন।</p></div>
+    <div class="service-card"><span class="icon">2️⃣</span><h3>সাইট পরিদর্শন</h3><p>আমাদের টিম নির্ধারিত স্থান পরিদর্শন করে প্রাথমিক পরিকল্পনা তৈরি করে।</p></div>
+    <div class="service-card"><span class="icon">3️⃣</span><h3>জরিপ কার্যক্রম</h3><p>আধুনিক যন্ত্রপাতি ব্যবহার করে মাঠ পর্যায়ে জরিপ সম্পন্ন।</p></div>
+    <div class="service-card"><span class="icon">4️⃣</span><h3>রিপোর্ট প্রদান</h3><p>ডিজিটাল ম্যাপ ও সম্পূর্ণ রিপোর্ট নির্ধারিত সময়ে হস্তান্তর।</p></div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col"><h4>ডিজিটাল সার্ভে ফার্ম</h4><p>আধুনিক প্রযুক্তিতে নির্ভুল ভূমি জরিপ সেবা।</p></div>
+    <div class="footer-col"><h4>লিংক</h4><ul><li><a href="index.html">হোম</a></li><li><a href="services.html">সেবা</a></li><li><a href="team.html">টিম</a></li><li><a href="contact.html">যোগাযোগ</a></li></ul></div>
+    <div class="footer-col"><h4>যোগাযোগ</h4><ul><li><a href="#">📍 ফেনী সদর</a></li><li><a href="tel:+8801XXXXXXXXX">📞 +880 1XXX-XXXXXX</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2025 ডিজিটাল সার্ভে ফার্ম</p></div>
+</footer>
+
+<script>
+function toggleNav() { document.getElementById('navLinks').classList.toggle('open'); }
+fetch('data.json').then(r=>r.json()).then(data=>{
+  const el = document.getElementById('allServices');
+  data.services.forEach(s=>{
+    el.innerHTML += `<div class="service-card"><span class="icon">${s.icon}</span><h3>${s.title}</h3><p>${s.desc}</p></div>`;
+  });
+});
+</script>
+</body>
+</html>
